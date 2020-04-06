@@ -1,0 +1,22 @@
+[
+  {
+    "Id": 1,
+    "Name": "A",
+    "Class": {
+      "Id": 1,
+      "Name": "16T1"
+    },
+    "Birthday": "01-03-1998",
+    "Score": 3.1
+  },
+  {
+    "Id": 2,
+    "Name": "B",
+    "Class": {
+      "Id": 2,
+      "Name": "16T2"
+    },
+    "Birthday": "30-11-1997",
+    "Score": 3.2
+  }
+]
