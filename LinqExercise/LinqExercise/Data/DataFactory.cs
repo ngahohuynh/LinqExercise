@@ -18,13 +18,13 @@ namespace LinqExercise.Data
             Students = GetStudentData();
         }
 
-        List<Class> GetClassData()
+        private List<Class> GetClassData()
         {
             var classData = File.ReadAllText("Data/ClassData.json");
             return JsonConvert.DeserializeObject<List<Class>>(classData);
         }
 
-        List<Student> GetStudentData()
+        private List<Student> GetStudentData()
         {
             var studentData = File.ReadAllText("Data/StudentData.json");
 
