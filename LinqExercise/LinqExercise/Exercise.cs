@@ -27,5 +27,10 @@ namespace LinqExercise
         {
             return students.Where(s => s.Birthday.Year == year).Select(s => s).ToList();
         }
+
+        public List<string> GetStudentNameOfClass(string className)
+        {
+            return students.Where(s => string.Equals(s.Class.Name, className)).Select(s => s.Name).ToList();
+        }
     }
 }

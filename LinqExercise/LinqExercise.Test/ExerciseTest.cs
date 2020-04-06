@@ -23,5 +23,13 @@ namespace LinqExericise.Test
             Assert.AreEqual(result.Count, 2);
             Assert.AreEqual(result[1].Name, "C");
         }
+
+        [TestMethod]
+        public void Test_GetStudentNameOfClass()
+        {
+            var result = exercise.GetStudentNameOfClass("16T2");
+            Assert.AreEqual(result.Count, 1);
+            Assert.AreEqual(result[0], "B");
+        }
     }
 }
