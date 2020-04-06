@@ -20,13 +20,13 @@ namespace LinqExercise.Data
 
         private List<Class> GetClassData()
         {
-            var classData = File.ReadAllText("Data/ClassData.json");
+            var classData = File.ReadAllText("C:/Code/LinqExercise/LinqExercise/LinqExercise/Data/ClassData.json");
             return JsonConvert.DeserializeObject<List<Class>>(classData);
         }
 
         private List<Student> GetStudentData()
         {
-            var studentData = File.ReadAllText("Data/StudentData.json");
+            var studentData = File.ReadAllText("C:/Code/LinqExercise/LinqExercise/LinqExercise/Data/StudentData.json");
 
             var dateFormat = "dd-MM-yyyy";
             var dateTimeConverter = new IsoDateTimeConverter { DateTimeFormat = dateFormat };

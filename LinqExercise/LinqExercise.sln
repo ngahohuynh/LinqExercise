@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqExercise", "LinqExercise\LinqExercise.csproj", "{85965A9E-4D1B-4708-9050-CA60ED07E673}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqExercise.Test", "LinqExercise.Test\LinqExercise.Test.csproj", "{B1215EBC-2850-48A8-A887-BD26502B217A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqExericise.Test", "LinqExercise.Test\LinqExericise.Test.csproj", "{B1215EBC-2850-48A8-A887-BD26502B217A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
