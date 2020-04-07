@@ -88,5 +88,16 @@ namespace LinqExericise.Test
             Assert.AreEqual(result.Count, 4);
             Assert.AreEqual(result[0].Name, "Newman");
         }
+
+        //10
+        [TestMethod]
+        public void Test_GetClassesWithStudentsScoreAbove()
+        {
+            var result = exercise.GetClassesWithStudentsScoreAbove(3.5);
+            Assert.AreEqual(result.Count, 3);
+            Assert.AreEqual(result[0], "16T1 1");
+            Assert.AreEqual(result[1], "16T2 1");
+            Assert.AreEqual(result[2], "16T3 0");
+        }
     }
 }

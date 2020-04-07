@@ -76,5 +76,24 @@ namespace LinqExercise
         {
             return students.Where(s => s.Score == null).ToList();
         }
+
+        //10
+        public List<string> GetClassesWithStudentsScoreAbove(double score)
+        {
+            var r = students.GroupBy(s => s.Class.Name, (className, stGroup) => new
+            {
+                ClassName = className,
+                Count = stGroup.Count(s => s.Score > 3.5)
+            });
+
+            var result = new List<string>();
+
+            foreach (var item in r)
+            {
+                result.Add($"{item.ClassName} {item.Count}");
+            }
+
+            return result;
+        }
     }
 }
