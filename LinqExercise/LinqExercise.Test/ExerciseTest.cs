@@ -69,5 +69,15 @@ namespace LinqExericise.Test
         {
             CollectionAssert.AreEqual(exercise.GetAllScores(), new List<Double?>() { 3.5, 3.2, 2.8, 3.9, 3.7, 3.3 });
         }
+
+        //8
+        [TestMethod]
+        public void Test_GetStudentsWithScoreBelow()
+        {
+            var result = exercise.GetStudentsWithScoreBelow(3.5);
+            Assert.AreEqual(result.Count, 3);
+            Assert.AreEqual(result[0].Score, 3.2);
+            Assert.AreEqual(result[1].Score, 2.8);
+        }
     }
 }

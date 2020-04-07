@@ -56,13 +56,19 @@ namespace LinqExercise
         //6
         public List<Student> GetStudentsWithNameContains(string str)
         {
-            return students.Where(s => s.Name.Contains(str)).Select(s => s).ToList();
+            return students.Where(s => s.Name.Contains(str)).ToList();
         }
 
         //7
         public List<Double?> GetAllScores()
         {
             return students.Where(s => s.Score != null).Select(s => s.Score).ToList();
+        }
+
+        //8
+        public List<Student> GetStudentsWithScoreBelow(double score)
+        {
+            return students.Where(s => s.Score < score).ToList();
         }
     }
 }
