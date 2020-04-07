@@ -9,6 +9,7 @@ namespace LinqExericise.Test
     {
         Exercise exercise = new Exercise();
 
+        //1
         [TestMethod]
         public void Test_GetStudentScore()
         {
@@ -16,28 +17,32 @@ namespace LinqExericise.Test
             Assert.AreEqual(exercise.GetStudentScore(4), null);
         }
 
+        //2
         [TestMethod]
         public void Test_GetStudentOfBirthYear()
         {
-            var result = exercise.GetStudentOfBirthYear(1998);
+            var result = exercise.GetStudentsOfBirthYear(1998);
             Assert.AreEqual(result.Count, 5);
             Assert.AreEqual(result[1].Name, "Lessie");
         }
 
+        //3
         [TestMethod]
         public void Test_GetStudentNameOfClass()
         {
-            var result = exercise.GetStudentNameOfClass("16T2");
+            var result = exercise.GetStudentNamesOfClass("16T2");
             Assert.AreEqual(result.Count, 4);
             Assert.AreEqual(result[0], "Sargent");
         }
 
+        //4
         [TestMethod]
         public void Test_GetAverageScoreOfClass()
         {
             Assert.AreEqual(exercise.GetAverageScoreOfClass("16T1"), 3.6);
         }
 
+        //5
         [TestMethod]
         public void Test_GetStudentsWithHighestScoreOfClass()
         {
@@ -45,6 +50,16 @@ namespace LinqExericise.Test
             Assert.AreEqual(result.Count, 3);
             Assert.AreEqual(result[0].Name, "Hodges");
             Assert.AreEqual(result[1].Name, "Goff");
+        }
+
+        //6
+        [TestMethod]
+        public void Test_GetStudentsWithNameContains()
+        {
+            var result = exercise.GetStudentsWithNameContains("ey");
+            Assert.AreEqual(result.Count, 2);
+            Assert.AreEqual(result[0].Name, "Haley");
+            Assert.AreEqual(result[1].Name, "Meyers");
         }
     }
 }

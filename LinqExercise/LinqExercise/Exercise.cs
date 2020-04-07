@@ -25,13 +25,13 @@ namespace LinqExercise
         }
 
         //2
-        public List<Student> GetStudentOfBirthYear(int year)
+        public List<Student> GetStudentsOfBirthYear(int year)
         {
             return students.Where(s => s.Birthday.Year == year).Select(s => s).ToList();
         }
 
         //3
-        public List<string> GetStudentNameOfClass(string className)
+        public List<string> GetStudentNamesOfClass(string className)
         {
             return students.Where(s => string.Equals(s.Class.Name, className)).Select(s => s.Name).ToList();
         }
@@ -51,6 +51,12 @@ namespace LinqExercise
                     .ForEach(c => result.Add(c.OrderByDescending(s => s.Score).FirstOrDefault()));
 
             return result;
+        }
+
+        //6
+        public List<Student> GetStudentsWithNameContains(string str)
+        {
+            return students.Where(s => s.Name.Contains(str)).Select(s => s).ToList();
         }
     }
 }
