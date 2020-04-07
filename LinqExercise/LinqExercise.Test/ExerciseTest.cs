@@ -12,24 +12,30 @@ namespace LinqExericise.Test
         [TestMethod]
         public void Test_GetStudentScore()
         {
-            Assert.AreEqual(exercise.GetStudentScore(1), 3.1);
-            Assert.AreEqual(exercise.GetStudentScore(3), null);
+            Assert.AreEqual(exercise.GetStudentScore(1), 3.5);
+            Assert.AreEqual(exercise.GetStudentScore(4), null);
         }
 
         [TestMethod]
         public void Test_GetStudentOfBirthYear()
         {
             var result = exercise.GetStudentOfBirthYear(1998);
-            Assert.AreEqual(result.Count, 2);
-            Assert.AreEqual(result[1].Name, "C");
+            Assert.AreEqual(result.Count, 5);
+            Assert.AreEqual(result[1].Name, "Lessie");
         }
 
         [TestMethod]
         public void Test_GetStudentNameOfClass()
         {
             var result = exercise.GetStudentNameOfClass("16T2");
-            Assert.AreEqual(result.Count, 1);
-            Assert.AreEqual(result[0], "B");
+            Assert.AreEqual(result.Count, 4);
+            Assert.AreEqual(result[0], "Sargent");
+        }
+
+        [TestMethod]
+        public void Test_GetAverageScoreOfClass()
+        {
+            Assert.AreEqual(exercise.GetAverageScoreOfClass("16T1"), 3.6);
         }
     }
 }
