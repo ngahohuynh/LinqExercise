@@ -58,5 +58,11 @@ namespace LinqExercise
         {
             return students.Where(s => s.Name.Contains(str)).Select(s => s).ToList();
         }
+
+        //7
+        public List<Double?> GetAllScores()
+        {
+            return students.Where(s => s.Score != null).Select(s => s.Score).ToList();
+        }
     }
 }

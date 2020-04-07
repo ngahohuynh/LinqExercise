@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using LinqExercise;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -60,6 +61,13 @@ namespace LinqExericise.Test
             Assert.AreEqual(result.Count, 2);
             Assert.AreEqual(result[0].Name, "Haley");
             Assert.AreEqual(result[1].Name, "Meyers");
+        }
+
+        //7
+        [TestMethod]
+        public void Test_GetAllScores()
+        {
+            CollectionAssert.AreEqual(exercise.GetAllScores(), new List<Double?>() { 3.5, 3.2, 2.8, 3.9, 3.7, 3.3 });
         }
     }
 }
