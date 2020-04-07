@@ -70,5 +70,11 @@ namespace LinqExercise
         {
             return students.Where(s => s.Score < score).ToList();
         }
+
+        //9
+        public List<Student> GetStudentsWithNoScore()
+        {
+            return students.Where(s => s.Score == null).ToList();
+        }
     }
 }

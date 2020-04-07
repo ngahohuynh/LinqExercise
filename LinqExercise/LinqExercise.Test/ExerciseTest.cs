@@ -79,5 +79,14 @@ namespace LinqExericise.Test
             Assert.AreEqual(result[0].Score, 3.2);
             Assert.AreEqual(result[1].Score, 2.8);
         }
+
+        //9
+        [TestMethod]
+        public void Test_GetStudentsWithNoScore()
+        {
+            var result = exercise.GetStudentsWithNoScore();
+            Assert.AreEqual(result.Count, 4);
+            Assert.AreEqual(result[0].Name, "Newman");
+        }
     }
 }
