@@ -1,31 +1,98 @@
 [
   {
     "Id": 1,
-    "Name": "A",
+    "Name": "Julie",
     "Class": {
       "Id": 1,
       "Name": "16T1"
     },
-    "Birthday": "01-03-1998",
-    "Score": 3.1
+    "Birthday": "12-05-1996",
+    "Score": 3.5
   },
   {
     "Id": 2,
-    "Name": "B",
+    "Name": "Sargent",
     "Class": {
       "Id": 2,
       "Name": "16T2"
     },
-    "Birthday": "30-11-1997",
+    "Birthday": "12-08-1998",
     "Score": 3.2
   },
   {
     "Id": 3,
-    "Name": "C",
+    "Name": "Lessie",
     "Class": {
       "Id": 3,
       "Name": "16T3"
     },
-    "Birthday": "20-09-1998"
+    "Birthday": "21-03-1998",
+    "Score": 2.8
+  },
+  {
+    "Id": 4,
+    "Name": "Newman",
+    "Class": {
+      "Id": 1,
+      "Name": "16T1"
+    },
+    "Birthday": "29-12-1998"
+  },
+  {
+    "Id": 5,
+    "Name": "Goff",
+    "Class": {
+      "Id": 2,
+      "Name": "16T2"
+    },
+    "Birthday": "04-09-1997",
+    "Score": 3.9
+  },
+  {
+    "Id": 6,
+    "Name": "Richard",
+    "Class": {
+      "Id": 3,
+      "Name": "16T3"
+    },
+    "Birthday": "26-07-1998"
+  },
+  {
+    "Id": 7,
+    "Name": "Hodges",
+    "Class": {
+      "Id": 1,
+      "Name": "16T1"
+    },
+    "Birthday": "08-05-1998",
+    "Score": 3.7
+  },
+  {
+    "Id": 8,
+    "Name": "Christa",
+    "Class": {
+      "Id": 2,
+      "Name": "16T2"
+    },
+    "Birthday": "08-03-1996"
+  },
+  {
+    "Id": 9,
+    "Name": "Haley",
+    "Class": {
+      "Id": 3,
+      "Name": "16T3"
+    },
+    "Birthday": "25-04-1997",
+    "Score": 3.3
+  },
+  {
+    "Id": 10,
+    "Name": "Meyers",
+    "Class": {
+      "Id": 2,
+      "Name": "16T2"
+    },
+    "Birthday": "14-03-1996"
   }
 ]
