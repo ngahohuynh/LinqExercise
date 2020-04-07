@@ -37,5 +37,14 @@ namespace LinqExericise.Test
         {
             Assert.AreEqual(exercise.GetAverageScoreOfClass("16T1"), 3.6);
         }
+
+        [TestMethod]
+        public void Test_GetStudentsWithHighestScoreOfClass()
+        {
+            var result = exercise.GetStudentsWithHighestScoreOfClass();
+            Assert.AreEqual(result.Count, 3);
+            Assert.AreEqual(result[0].Name, "Hodges");
+            Assert.AreEqual(result[1].Name, "Goff");
+        }
     }
 }

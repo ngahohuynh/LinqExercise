@@ -42,6 +42,15 @@ namespace LinqExercise
             return students.Where(s => string.Equals(s.Class.Name, className)).Select(s => s.Score).Average();
         }
 
-        
+        //5
+        public List<Student> GetStudentsWithHighestScoreOfClass()
+        {
+            var result = new List<Student>();
+
+            students.GroupBy(s => s.Class.Id).ToList()
+                    .ForEach(c => result.Add(c.OrderByDescending(s => s.Score).FirstOrDefault()));
+
+            return result;
+        }
     }
 }
