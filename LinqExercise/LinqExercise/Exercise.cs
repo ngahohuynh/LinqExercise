@@ -83,7 +83,7 @@ namespace LinqExercise
             var r = students.GroupBy(s => s.Class.Name, (className, stGroup) => new
             {
                 ClassName = className,
-                Count = stGroup.Count(s => s.Score > 3.5)
+                Count = stGroup.Count(s => s.Score > score)
             });
 
             var result = new List<string>();
