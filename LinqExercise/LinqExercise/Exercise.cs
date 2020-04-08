@@ -99,11 +99,13 @@ namespace LinqExercise
         //11
         public Class GetClassWithHighestAvgScore()
         {
-            return students.GroupBy(s => s.Class, (stClass, stGroup) => new
+            var classId = students.GroupBy(s => s.Class.Id, (stClass, stGroup) => new
             {
-                Class = stClass,
+                ClassId = stClass,
                 AvgScore = stGroup.Average(s => s.Score)
-            }).OrderByDescending(c => c.AvgScore).FirstOrDefault().Class;
+            }).OrderByDescending(c => c.AvgScore).FirstOrDefault().ClassId;
+
+            return classes.Where(c => c.Id == classId).FirstOrDefault();
         }
 
         //12
@@ -119,6 +121,11 @@ namespace LinqExercise
             l.ForEach(n => result.Add(r[random.Next(r.Count)]));
 
             return result;
+        }
+
+        public bool CheckStudentInClass(int classId, int birthYear, double score)
+        {
+            return students.Any(s => s.Class.Id == classId && s.Birthday.Year == birthYear && s.Score >= score);
         }
     }
 }

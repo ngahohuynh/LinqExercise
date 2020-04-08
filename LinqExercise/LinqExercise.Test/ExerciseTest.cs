@@ -104,7 +104,7 @@ namespace LinqExericise.Test
         [TestMethod]
         public void Test_GetClassWithHighestAvgScore()
         {
-            Assert.AreEqual(exercise.GetClassWithHighestAvgScore().Name, "16T2");
+            Assert.AreEqual(exercise.GetClassWithHighestAvgScore().Name, "16T1");
         }
         
         //12
