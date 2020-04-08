@@ -106,5 +106,13 @@ namespace LinqExericise.Test
         {
             Assert.AreEqual(exercise.GetClassWithHighestAvgScore().Name, "16T2");
         }
+        
+        //12
+        [TestMethod]
+        public void Test_GetRandomStudentsFromClass()
+        {
+            var result = exercise.GetRandomStudentsFromClass(1, 2);
+            Assert.AreEqual(result.Count, 2);
+        }
     }
 }

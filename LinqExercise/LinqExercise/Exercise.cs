@@ -105,5 +105,20 @@ namespace LinqExercise
                 AvgScore = stGroup.Average(s => s.Score)
             }).OrderByDescending(c => c.AvgScore).FirstOrDefault().Class;
         }
+
+        //12
+        public List<Student> GetRandomStudentsFromClass(int classId, int number)
+        {
+            var random = new Random();
+            var result = new List<Student>();
+
+            var l = Enumerable.Range(1, number).ToList();
+
+            var r = students.Where(s => s.Class.Id == classId).ToList();
+
+            l.ForEach(n => result.Add(r[random.Next(r.Count)]));
+
+            return result;
+        }
     }
 }
