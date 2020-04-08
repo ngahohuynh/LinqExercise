@@ -99,5 +99,12 @@ namespace LinqExericise.Test
             Assert.AreEqual(result[1], "16T2 1");
             Assert.AreEqual(result[2], "16T3 0");
         }
+
+        //11
+        [TestMethod]
+        public void Test_GetClassWithHighestAvgScore()
+        {
+            Assert.AreEqual(exercise.GetClassWithHighestAvgScore().Name, "16T2");
+        }
     }
 }

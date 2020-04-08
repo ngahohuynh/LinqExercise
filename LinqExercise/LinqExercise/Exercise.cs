@@ -95,5 +95,15 @@ namespace LinqExercise
 
             return result;
         }
+
+        //11
+        public Class GetClassWithHighestAvgScore()
+        {
+            return students.GroupBy(s => s.Class, (stClass, stGroup) => new
+            {
+                Class = stClass,
+                AvgScore = stGroup.Average(s => s.Score)
+            }).OrderByDescending(c => c.AvgScore).FirstOrDefault().Class;
+        }
     }
 }
