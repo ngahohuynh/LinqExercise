@@ -114,5 +114,13 @@ namespace LinqExericise.Test
             var result = exercise.GetRandomStudentsFromClass(1, 2);
             Assert.AreEqual(result.Count, 2);
         }
+
+        //13
+        [TestMethod]
+        public void Test_CheckStudentInClass()
+        {
+            Assert.AreEqual(exercise.CheckStudentInClass(1, 1996, 3.5), true);
+            Assert.AreEqual(exercise.CheckStudentInClass(3, 1998, 3.3), false);
+        }
     }
 }

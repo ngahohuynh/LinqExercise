@@ -123,6 +123,7 @@ namespace LinqExercise
             return result;
         }
 
+        //13
         public bool CheckStudentInClass(int classId, int birthYear, double score)
         {
             return students.Any(s => s.Class.Id == classId && s.Birthday.Year == birthYear && s.Score >= score);
